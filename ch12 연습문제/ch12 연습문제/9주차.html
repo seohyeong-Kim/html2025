@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+  <html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Grid Layout</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 1024px;
+        margin:10px auto;
+        padding: 10px;
+        display: grid;
+        gap: 10px;
+        grid-template-areas: 
+          "a a b"
+          "a a c"
+          "d e f";
+      }
+      .a {grid-area: a}
+      .b {grid-area: b}
+      .c {grid-area: c}
+      .d {grid-area: d}
+      .e {grid-area: e}
+      .f {grid-area: f}
+
+      .container img{
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        border-radius: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img class="a" src="img/photo-1.jpg" alt="">
+      <img class="b" src="img/photo-2.jpg" alt="">
+      <img class="c" src="img/photo-3.jpg" alt="">
+      <img class="d" src="img/photo-4.jpg" alt="">
+      <img class="e" src="img/photo-5.jpg" alt="">
+      <img class="f" src="img/photo-6.jpg" alt="">
+    </div>
+  </body>
+  </html>
